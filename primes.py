@@ -1,11 +1,9 @@
 """List of prime numbers generator."""
 """ENTER YOUR SOLUTION HERE!"""
 
-import math
 def primes(number_of_primes):
-  try:
-        math.sqrt(number_of_primes)
-  except ValueError:
+  if number_of_primes < 0:
+    raise ValueError
   list = []
   count_primes = 0
   running_count = 2
