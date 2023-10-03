@@ -1,6 +1,24 @@
 """List of prime numbers generator."""
 """ENTER YOUR SOLUTION HERE!"""
 
+import math
 def primes(number_of_primes):
-    list = []
-    return list
+  try:
+        math.sqrt(number_of_primes)
+  except ValueError:
+        print("Please enter a number greater than 0")
+  list = []
+  count_primes = 0
+  running_count = 2
+  while count_primes < number_of_primes:
+      i = running_count - 1
+      mods = 0
+      while i > 0:
+          if (running_count % (running_count - i)) != 0:
+              mods += 1
+          i -= 1
+      if mods == (running_count - 2):
+           count_primes += 1
+           list.append(running_count)
+      running_count += 1
+  return list
