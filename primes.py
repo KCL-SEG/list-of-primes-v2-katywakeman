@@ -6,7 +6,6 @@ def primes(number_of_primes):
   try:
         math.sqrt(number_of_primes)
   except ValueError:
-        print("Please enter a number greater than 0")
   list = []
   count_primes = 0
   running_count = 2
